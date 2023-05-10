@@ -1,0 +1,24 @@
+<template>
+    <div class="slds-grid slds-gutters">
+        <div class="slds-col slds-size_2-of-12  slds-scrollable_y " style="height:30rem;">
+            <lightning-card >
+                <div class="slds-card">
+                    <lightning-checkbox-group class="slds-m-left_large"
+                        name="SelectFields"  
+                        label="Select Fields"
+                        options={lstFields}
+                        value ={lstFields}
+                        onchange={handleCheckBoxClick}>
+                    </lightning-checkbox-group>
+                    <div if:true={showButton} style="align-items: center;">
+                    <lightning-button label="Show Data" name="ShowData" variant="Brand" style="margin-top: 15px;" onclick={handleShowData}></lightning-button>
+               </div>>
+                </div>
+            </lightning-card>
+        </div>
+        <div class="slds-col slds-size_10-of-12  slds-scrollable_y" style="height:30rem;" >
+            <c-sobject-record-list  array-to-send-grand={arrayToSend}  object-name-grand={objectNameChild}></c-sobject-record-list>
+        </div>
+    </div>
+    
+</template>

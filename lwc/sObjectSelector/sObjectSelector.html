@@ -1,0 +1,29 @@
+<template>
+    <lightning-card>
+        <lightning-layout title="Select Your Account" >
+            <lightning-layout-item padding="around-small" size="10" title="Select Your Account">
+                <div >
+                    <lightning-combobox  
+                     name="ObjectList"
+                     onchange={onObjectChange} 
+                     options={objectList} 
+                     placeholder="Select Object">
+                     
+                    </lightning-combobox> 
+                </div>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small" size="10">
+                <div class="slds-col slds-col slds-size_3-of-12 slds-align_center ">
+                    <br>
+                    <lightning-button label="Create New Record"
+                     name="Create New Record" 
+                     variant="Neutral"
+                     onclick={handleClick}
+                     >
+                    </lightning-button>
+                </div>
+            </lightning-layout-item>
+        </lightning-layout>     
+    </lightning-card><br>
+    <c-feilds-selector object-name-child={objectName} array-to-sendclone={arrayToSend} show-button={showButton} ></c-feilds-selector>
+</template>

@@ -1,0 +1,15 @@
+<template>
+    <lightning-card >
+        <div class="slds-card">
+            <lightning-datatable
+                key-field="id"      
+                columns={columnsMap} 
+                data = {allRecordsOfSelectedObject}
+                show-row-number-column="true"
+                type="checkbox"
+                onrowaction={handleRowAction}
+                row-actions={actions}>
+            </lightning-datatable>
+        </div>
+    </lightning-card>
+</template>
